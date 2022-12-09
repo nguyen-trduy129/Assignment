@@ -1,0 +1,40 @@
+/*
+ * global.h
+ *
+ *  Created on: Dec 8, 2022
+ *      Author: duyvt
+ */
+
+#ifndef INC_GLOBAL_H_
+#define INC_GLOBAL_H_
+
+#include "main.h"
+#include "button.h"
+#include "scheduler.h"
+#include "traffic_automatic.h"
+#include "traffic_manual.h"
+#include "pedestrian_light.h"
+#include "buzzef.h"
+
+
+#define TICK 	10
+
+#define INIT			0
+#define AUTO_RED		1
+#define AUTO_AMBER		2
+#define AUTO_GREEN		3
+
+#define MANUAL_RED		11
+#define MANUAL_AMBER	12
+#define MANUAL_GREEN	13
+#define TUNNING	4
+
+#define INIT_MODE		0
+#define MODE_1			1
+#define MODE_2			2
+#define MODE_3			3
+#define MODE
+
+extern
+
+#endif /* INC_GLOBAL_H_ */

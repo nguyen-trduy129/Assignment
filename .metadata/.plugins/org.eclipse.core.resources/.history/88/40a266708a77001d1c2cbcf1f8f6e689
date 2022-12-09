@@ -1,0 +1,18 @@
+/*
+ * traffic_tuning.c
+ *
+ *  Created on: Dec 9, 2022
+ *      Author: duyvt
+ */
+
+#include "traffic_tuning.h"
+
+void fsm_tuning_run(){
+	switch(state_1){
+
+	}
+
+	switch(state_2){
+
+	}
+}

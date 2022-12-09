@@ -1,0 +1,12 @@
+/*
+ * global.c
+ *
+ *  Created on: Dec 8, 2022
+ *      Author: duyvt
+ */
+
+
+#include "global.h"
+
+int state = 0;
+int mode = 0;

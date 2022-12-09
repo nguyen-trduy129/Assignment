@@ -1,0 +1,145 @@
+/*
+ * traffic_manual.c
+ *
+ *  Created on: Dec 8, 2022
+ *      Author: duyvt
+ */
+
+
+#include "traffic_manual.h"
+
+void fsm_manual_run(){
+	switch (state_1){
+	case MAN_RED:
+		HAL_GPIO_WritePin(GPIOA, TRAFFIC1_0_Pin, 1);
+		HAL_GPIO_WritePin(GPIOB, TRAFFIC1_1_Pin, 1);
+
+		if (isButton1Pressed()){
+			state_1= TUN_RED;
+			setTimer2(25);
+		}
+
+		if (isButton2Pressed()){
+			state_1= MAN_GREEN;
+			setTimer2(WAITING_TIME);
+		}
+
+		if (isButton3Pressed()){
+			state_1=MAN_AMBER;
+			setTimer2(WAITING_TIME);
+		}
+
+		if (timer2_flag ==1){
+			state_1=AUTO_RED;
+			setTimer2(redTime*100);
+		}
+		break;
+	case MAN_GREEN:
+		HAL_GPIO_WritePin(GPIOA, TRAFFIC1_0_Pin, 1);
+		HAL_GPIO_WritePin(GPIOB, TRAFFIC1_1_Pin, 0);
+
+		if (isButton1Pressed()){
+			state_1= TUN_RED;
+			setTimer2(25);
+		}
+
+		if (isButton2Pressed()){
+			state_1= MAN_AMBER;
+			setTimer2(WAITING_TIME);
+		}
+
+		if (isButton3Pressed()){
+			state_1=MAN_RED;
+			setTimer2(WAITING_TIME);
+		}
+
+		if (timer2_flag ==1){
+			state_1=AUTO_RED;
+			setTimer2(redTime*100);
+		}
+		break;
+	case MAN_AMBER:
+		HAL_GPIO_WritePin(GPIOA, TRAFFIC1_0_Pin, 0);
+		HAL_GPIO_WritePin(GPIOB, TRAFFIC1_1_Pin, 1);
+		break;
+
+		if (isButton2Pressed()){
+			state_1= MAN_RED;
+			setTimer2(WAITING_TIME);
+		}
+
+		if (isButton3Pressed()){
+			state_1=MAN_GREEN;
+			setTimer2(WAITING_TIME);
+		}
+
+		if (timer2_flag ==1){
+			state_1=AUTO_RED;
+			setTimer2(redTime*100);
+		}
+	default:
+		break;
+	}
+
+	switch (state_2){
+	case MAN_GREEN:
+		HAL_GPIO_WritePin(GPIOB, TRAFFIC2_0_Pin, 1);
+		HAL_GPIO_WritePin(GPIOB, TRAFFIC2_1_Pin, 0);
+
+		if (isButton2Pressed()){
+			state_2= MAN_AMBER;
+			setTimer3(WAITING_TIME);
+		}
+
+		if (isButton3Pressed()){
+			state_2=MAN_RED;
+			setTimer3(WAITING_TIME);
+		}
+
+		if (timer3_flag ==1){
+			state_2=AUTO_GREEN;
+			setTimer3(greenTime*100);
+		}
+		break;
+	case MAN_AMBER:
+		HAL_GPIO_WritePin(GPIOB, TRAFFIC2_0_Pin, 1);
+		HAL_GPIO_WritePin(GPIOB, TRAFFIC2_1_Pin, 1);
+
+		if (isButton2Pressed()){
+			state_2= MAN_RED;
+			setTimer3(WAITING_TIME);
+		}
+
+		if (isButton3Pressed()){
+			state_2=MAN_GREEN;
+			setTimer3(WAITING_TIME);
+		}
+
+		if (timer3_flag ==1){
+			state_2=AUTO_GREEN;
+			setTimer3(greenTime*100);
+		}
+		break;
+	case MAN_RED:
+		HAL_GPIO_WritePin(GPIOB, TRAFFIC2_0_Pin, 0);
+		HAL_GPIO_WritePin(GPIOB, TRAFFIC2_1_Pin, 1);
+
+		if (isButton2Pressed()){
+			state_2= MAN_GREEN;
+			setTimer3(WAITING_TIME);
+		}
+
+		if (isButton3Pressed()){
+			state_2=MAN_AMBER;
+			setTimer3(WAITING_TIME);
+		}
+
+		if (timer3_flag ==1){
+			state_2=AUTO_GREEN;
+			setTimer3(greenTime*100);
+		}
+		break;
+	default:
+		break;
+	}
+}
