@@ -10,6 +10,7 @@
 
 #include "global.h"
 
-void fsm_tuning_run();
+void fsm_tuning_run1();
+void fsm_tuning_run2();
 
 #endif /* INC_TRAFFIC_TUNING_H_ */

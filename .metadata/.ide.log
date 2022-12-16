@@ -3706,3 +3706,43 @@
 2022-12-16 11:09:44,404 [INFO] IPUIPlugin:74 - create IPUIPlugin
 2022-12-16 11:09:44,404 [INFO] IPUIPlugin:74 - create IPUIPlugin
 2022-12-16 11:09:44,531 [INFO] OpenFileManager:333 - Restore cursor
+2022-12-16 11:16:04,809 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 535982688 Bytes (736100352)
+2022-12-16 11:16:06,349 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 554857056 Bytes (736100352)
+2022-12-16 11:16:08,197 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 299071328 Bytes (736100352)
+2022-12-16 11:16:08,636 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2022-12-16 11:16:08,636 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: USART
+2022-12-16 11:16:08,636 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2022-12-16 11:16:08,636 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2022-12-16 11:16:08,636 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2022-12-16 11:16:08,637 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2022-12-16 11:16:08,637 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2022-12-16 11:16:08,637 [INFO] CodeGenerator:663 - code generatio: config db path: C:\ST\STM32CubeIDE_1.7.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.3.0.202107141111\\db\
+2022-12-16 11:16:08,975 [INFO] CodeEngine:239 - oldGeneratedFile, E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\MXTmpFiles\license.tmp_save
+2022-12-16 11:16:09,302 [INFO] CodeEngine:257 - Generated code: E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\MXTmpFiles\license.tmp
+2022-12-16 11:16:09,455 [INFO] CodeEngine:239 - oldGeneratedFile, E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\MXTmpFiles\gpio.tmp_save
+2022-12-16 11:16:09,560 [INFO] CodeEngine:257 - Generated code: E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\MXTmpFiles\gpio.tmp
+2022-12-16 11:16:09,971 [INFO] CodeEngine:239 - oldGeneratedFile, E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\Core\Src\stm32f1xx_it.c_save
+2022-12-16 11:16:10,083 [INFO] CodeEngine:257 - Generated code: E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\Core\Src\stm32f1xx_it.c
+2022-12-16 11:16:10,092 [INFO] CodeEngine:239 - oldGeneratedFile, E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\Core\Inc\stm32f1xx_it.h_save
+2022-12-16 11:16:10,152 [INFO] CodeEngine:257 - Generated code: E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\Core\Inc\stm32f1xx_it.h
+2022-12-16 11:16:10,174 [INFO] CodeEngine:239 - oldGeneratedFile, E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\Core\Src\stm32f1xx_hal_msp.c_save
+2022-12-16 11:16:10,286 [INFO] CodeEngine:257 - Generated code: E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\Core\Src\stm32f1xx_hal_msp.c
+2022-12-16 11:16:10,294 [INFO] CodeEngine:239 - oldGeneratedFile, E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\MXTmpFiles\system.tmp_save
+2022-12-16 11:16:10,338 [INFO] CodeEngine:257 - Generated code: E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\MXTmpFiles\system.tmp
+2022-12-16 11:16:10,358 [INFO] CodeEngine:239 - oldGeneratedFile, E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\Core\Inc\stm32f1xx_hal_conf.h_save
+2022-12-16 11:16:10,437 [INFO] CodeEngine:257 - Generated code: E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\Core\Inc\stm32f1xx_hal_conf.h
+2022-12-16 11:16:10,460 [WARN] IPConfigManager:3148 - IP not found : TIM
+2022-12-16 11:16:10,463 [WARN] CodeGenerator:3268 - IP not found : null
+2022-12-16 11:16:10,482 [INFO] CodeEngine:239 - oldGeneratedFile, E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\Core\Inc\main.h_save
+2022-12-16 11:16:10,553 [INFO] CodeEngine:257 - Generated code: E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\Core\Inc\main.h
+2022-12-16 11:16:10,567 [INFO] CodeEngine:239 - oldGeneratedFile, E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\Core\Src\main.c_save
+2022-12-16 11:16:10,698 [INFO] CodeEngine:257 - Generated code: E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\Core\Src\main.c
+2022-12-16 11:16:11,730 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 338mS.
+2022-12-16 11:16:11,733 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2022-12-16 11:16:12,236 [INFO] ConfigFileManager:1271 - The Die is : DIE410
+2022-12-16 11:16:12,256 [INFO] ApiDbMcu:468 - Load IP Config File for FATFS
+2022-12-16 11:16:12,286 [INFO] ApiDbMcu:468 - Load IP Config File for FREERTOS
+2022-12-16 11:16:12,316 [INFO] ApiDbMcu:468 - Load IP Config File for USB_DEVICE
+2022-12-16 11:16:15,158 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 3425mS.
+2022-12-16 11:16:15,158 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2022-12-16 11:16:15,160 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.

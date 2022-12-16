@@ -41,7 +41,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 TIM_HandleTypeDef htim2;
-TIM_HandleTypeDef htim3;
+//TIM_HandleTypeDef htim3;
 
 UART_HandleTypeDef huart2;
 
@@ -97,6 +97,7 @@ int main(void)
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT(&htim2);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
 
   /* USER CODE END 2 */
 
@@ -106,9 +107,33 @@ int main(void)
   while (1)
   {
 	  ledBlink();
-	  fsm_automatic_run();
-	  fsm_manual_run();
-	  fsm_tuning_run();
+	  modeRun();
+	 // buzzerRun();
+	  pedes_light_fsm();
+	  fsm_automatic_run1();
+	  fsm_automatic_run2();
+	  fsm_manual_run1();
+	  fsm_manual_run2();
+	  fsm_tuning_run1();
+	  fsm_tuning_run2();
+
+	  //__HAL_TIM_SetCompare (&htim3,TIM_CHANNEL_1,5);
+//	  HAL_Delay(10);
+//	  __HAL_TIM_SetCompare (&htim3,TIM_CHANNEL_1,12);
+//	  HAL_Delay(10);
+//	  __HAL_TIM_SetCompare (&htim3,TIM_CHANNEL_1,25);
+//	  HAL_Delay(10);
+//	  __HAL_TIM_SetCompare (&htim3,TIM_CHANNEL_1,40);
+//	  HAL_Delay(10);
+//	  __HAL_TIM_SetCompare (&htim3,TIM_CHANNEL_1,60);
+//	  HAL_Delay(10);
+//	  __HAL_TIM_SetCompare (&htim3,TIM_CHANNEL_1,80);
+//	  HAL_Delay(10);
+//	  __HAL_TIM_SetCompare (&htim3,TIM_CHANNEL_1,100);
+//	 if (timer6_flag ==1){
+//
+//		  setTimer6(250);
+//	 }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

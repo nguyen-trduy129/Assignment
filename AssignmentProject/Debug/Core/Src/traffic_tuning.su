@@ -1,1 +1,2 @@
-traffic_tuning.c:10:6:fsm_tuning_run	8	static
+traffic_tuning.c:10:6:fsm_tuning_run1	8	static
+traffic_tuning.c:85:6:fsm_tuning_run2	8	static

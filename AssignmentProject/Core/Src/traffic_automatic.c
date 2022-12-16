@@ -7,7 +7,7 @@
 
 #include "traffic_automatic.h"
 
-void fsm_automatic_run(){
+void fsm_automatic_run1(){
 	switch(state_1){
 	case INIT:
 		state_1 = AUTO_RED;
@@ -22,11 +22,10 @@ void fsm_automatic_run(){
 			setTimer2(greenTime*1000);
 		}
 
-		if (isButton1Pressed()){
+		if (mode == MODE_2){
 			state_1 = MAN_RED;
 			setTimer2(WAITING_TIME);
 		}
-
 		break;
 	case AUTO_GREEN:
 		HAL_GPIO_WritePin(GPIOA,TRAFFIC1_1_Pin , 0);
@@ -37,11 +36,10 @@ void fsm_automatic_run(){
 			setTimer2(amberTime*1000);
 		}
 
-		if (isButton1Pressed()){
+		if (mode == MODE_2){
 			state_1 = MAN_RED;
 			setTimer2(WAITING_TIME);
 		}
-
 		break;
 	case AUTO_AMBER:
 		HAL_GPIO_WritePin(GPIOA,TRAFFIC1_1_Pin , 1);
@@ -52,60 +50,65 @@ void fsm_automatic_run(){
 			setTimer2(redTime*1000);
 		}
 
-		if (isButton1Pressed()){
+		if (mode == MODE_2){
 			state_1 = MAN_RED;
 			setTimer2(WAITING_TIME);
 		}
-
 		break;
 	default:
 		break;
 	}
+}
 
+void fsm_automatic_run2(){
 	switch(state_2){
-		case INIT:
+	case INIT:
+		state_2 = AUTO_GREEN;
+		setTimer3(greenTime*1000);
+		break;
+	case AUTO_GREEN:
+		ledBlink();
+		HAL_GPIO_WritePin(GPIOB,TRAFFIC2_1_Pin , 0);
+		HAL_GPIO_WritePin(GPIOB,TRAFFIC2_0_Pin , 1);
+
+		if(timer3_flag ==1){
+			state_2 = AUTO_AMBER;
+			setTimer3(amberTime*1000);
+		}
+
+		if (mode == MODE_2){
+			state_2 = MAN_GREEN;
+			setTimer3(WAITING_TIME);
+		}
+		break;
+	case AUTO_AMBER:
+		HAL_GPIO_WritePin(GPIOB,TRAFFIC2_0_Pin , 1);
+		HAL_GPIO_WritePin(GPIOB,TRAFFIC2_1_Pin , 1);
+		if(timer3_flag ==1){
+			state_2 = AUTO_RED;
+			setTimer3(redTime*1000);
+		}
+
+		if (mode == MODE_2){
+			state_2 = MAN_GREEN;
+			setTimer3(WAITING_TIME);
+		}
+		break;
+	case AUTO_RED:
+		HAL_GPIO_WritePin(GPIOB,TRAFFIC2_1_Pin , 1);
+		HAL_GPIO_WritePin(GPIOB,TRAFFIC2_0_Pin , 0);
+
+		if(timer3_flag ==1){
 			state_2 = AUTO_GREEN;
 			setTimer3(greenTime*1000);
-			break;
-		case AUTO_GREEN:
-			HAL_GPIO_WritePin(GPIOB,TRAFFIC2_1_Pin , 0);
-			HAL_GPIO_WritePin(GPIOB,TRAFFIC2_0_Pin , 1);
-
-
-			if(timer3_flag ==1){
-				state_2 = AUTO_AMBER;
-				setTimer3(amberTime*1000);
-			}
-
-			break;
-		case AUTO_AMBER:
-			HAL_GPIO_WritePin(GPIOB,TRAFFIC2_0_Pin , 1);
-			HAL_GPIO_WritePin(GPIOB,TRAFFIC2_1_Pin , 1);
-			if(timer3_flag ==1){
-				state_2 = AUTO_RED;
-				setTimer3(redTime*1000);
-			}
-
-			if (isButton1Pressed()){
-				state_2 = MAN_GREEN;
-				setTimer3(WAITING_TIME);
-			}
-			break;
-		case AUTO_RED:
-			HAL_GPIO_WritePin(GPIOB,TRAFFIC2_1_Pin , 1);
-			HAL_GPIO_WritePin(GPIOB,TRAFFIC2_0_Pin , 0);
-
-			if(timer3_flag ==1){
-				state_2 = AUTO_GREEN;
-				setTimer3(greenTime*1000);
-			}
-
-			if (isButton1Pressed()){
-				state_2 = MAN_GREEN;
-				setTimer3(WAITING_TIME);
-			}
-			break;
-		default:
-			break;
 		}
+
+		if (mode == MODE_2){
+			state_2 = MAN_GREEN;
+			setTimer3(WAITING_TIME);
+		}
+		break;
+	default:
+		break;
+	}
 }

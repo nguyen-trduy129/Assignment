@@ -10,6 +10,7 @@
 
 #include "global.h"
 
-void fsm_manual_run();
+void fsm_manual_run1();
+void fsm_manual_run2();
 
 #endif /* INC_TRAFFIC_MANUAL_H_ */

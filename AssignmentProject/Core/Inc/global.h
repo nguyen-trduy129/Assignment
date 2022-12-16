@@ -14,10 +14,10 @@
 #include "traffic_automatic.h"
 #include "traffic_manual.h"
 #include "pedestrian_light.h"
-#include "buzzef.h"
 #include "software_timer.h"
 #include "traffic_tuning.h"
-
+#include "fsm_mode.h"
+#include "buzzer.h"
 
 #define TICK 			10
 #define WAITING_TIME 	10000
@@ -52,6 +52,8 @@ extern int greenTime;
 extern int mode;
 extern int state_1;
 extern int state_2;
+
+#define __HAL_TIM_SetCompare            __HAL_TIM_SET_COMPARE
 
 void ledBlink();
 

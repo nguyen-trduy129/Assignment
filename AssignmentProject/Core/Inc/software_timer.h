@@ -15,12 +15,14 @@ extern int timer2_flag; //for state_1
 extern int timer3_flag; //for state_2
 extern int timer4_flag; //for pedes_light
 extern int timer5_flag; //for turnoff_pedes_light
+extern int timer6_flag;
 
 void setTimer1(int duration);
 void setTimer2(int duration);
 void setTimer3(int duration);
 void setTimer4(int duration);
 void setTimer5(int duration);
+void setTimer6(int duration);
 
 int get_timer2_counter();
 
