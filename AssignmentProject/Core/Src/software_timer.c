@@ -37,6 +37,22 @@ void setTimer4(int duration){
 	timer4_counter = duration/TICK;
 	timer4_flag = 0;
 }
+void setTimer5(int duration){
+	timer5_counter = duration/TICK;
+	timer5_flag = 0;
+}
+
+int get_timer2_counter(){
+	return timer2_counter;
+}
+
+int timerInit(){
+	setTimer1(30);
+	setTimer2(50);
+	setTimer3(70);
+	setTimer4(110);
+	setTimer5(130);
+}
 
 void timerRun(){
 	if(timer1_counter > 0){
@@ -63,5 +79,10 @@ void timerRun(){
 			timer4_flag = 1;
 		}
 	}
-
+	if(timer5_counter > 0){
+		timer5_counter--;
+		if(timer5_counter <= 0){
+			timer5_flag = 1;
+		}
+	}
 }

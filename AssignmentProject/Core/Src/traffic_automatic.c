@@ -26,6 +26,7 @@ void fsm_automatic_run(){
 			state_1 = MAN_RED;
 			setTimer2(WAITING_TIME);
 		}
+
 		break;
 	case AUTO_GREEN:
 		HAL_GPIO_WritePin(GPIOA,TRAFFIC1_0_Pin , 0);
@@ -40,6 +41,7 @@ void fsm_automatic_run(){
 			state_1 = MAN_RED;
 			setTimer2(WAITING_TIME);
 		}
+
 		break;
 	case AUTO_AMBER:
 		HAL_GPIO_WritePin(GPIOA,TRAFFIC1_0_Pin , 1);
@@ -54,6 +56,7 @@ void fsm_automatic_run(){
 			state_1 = MAN_RED;
 			setTimer2(WAITING_TIME);
 		}
+
 		break;
 	default:
 		break;
@@ -73,10 +76,6 @@ void fsm_automatic_run(){
 				setTimer3(amberTime*1000);
 			}
 
-			if (isButton1Pressed()){
-				state_2 = MAN_GREEN;
-				setTimer3(WAITING_TIME);
-			}
 			break;
 		case AUTO_AMBER:
 			HAL_GPIO_WritePin(GPIOB,TRAFFIC2_0_Pin , 1);

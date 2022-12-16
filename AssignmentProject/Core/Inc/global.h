@@ -40,6 +40,11 @@
 #define MODE_2			2
 #define MODE_3			3
 
+#define PEDES_INIT		0
+#define PEDES_OFF		1
+#define PEDES_RED		2
+#define PEDES_GREEN		3
+
 extern int redTime;
 extern int amberTime;
 extern int greenTime;

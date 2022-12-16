@@ -10,5 +10,9 @@
 
 #include "global.h"
 
+extern int pedes_state;
+extern int pedes_flag;
+
+void pedes_light_fsm();
 
 #endif /* INC_PEDESTRIAN_LIGHT_H_ */

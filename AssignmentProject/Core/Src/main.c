@@ -102,12 +102,14 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  timerInit();
   while (1)
   {
-    /* USER CODE END WHILE */
 	  fsm_automatic_run();
 	  fsm_manual_run();
 	  fsm_tuning_run();
+    /* USER CODE END WHILE */
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -301,15 +303,22 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, PEDES_0_Pin|TRAFFIC1_1_Pin|TRAFFIC2_0_Pin|TRAFFIC2_1_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, LED_RED_Pin|PLED_RED_Pin|TRAFFIC1_1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, PEDES_1_Pin|TRAFFIC1_0_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, PLED_GREEN_Pin|TRAFFIC1_0_Pin|TRAFFIC2_0_Pin|TRAFFIC2_1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : BUTTON_PEDES_Pin BUTTON1_Pin BUTTON2_Pin */
   GPIO_InitStruct.Pin = BUTTON_PEDES_Pin|BUTTON1_Pin|BUTTON2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : LED_RED_Pin PLED_RED_Pin TRAFFIC1_1_Pin */
+  GPIO_InitStruct.Pin = LED_RED_Pin|PLED_RED_Pin|TRAFFIC1_1_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pin : BUTTON3_Pin */
@@ -318,19 +327,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(BUTTON3_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PEDES_0_Pin TRAFFIC1_1_Pin TRAFFIC2_0_Pin TRAFFIC2_1_Pin */
-  GPIO_InitStruct.Pin = PEDES_0_Pin|TRAFFIC1_1_Pin|TRAFFIC2_0_Pin|TRAFFIC2_1_Pin;
+  /*Configure GPIO pins : PLED_GREEN_Pin TRAFFIC1_0_Pin TRAFFIC2_0_Pin TRAFFIC2_1_Pin */
+  GPIO_InitStruct.Pin = PLED_GREEN_Pin|TRAFFIC1_0_Pin|TRAFFIC2_0_Pin|TRAFFIC2_1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : PEDES_1_Pin TRAFFIC1_0_Pin */
-  GPIO_InitStruct.Pin = PEDES_1_Pin|TRAFFIC1_0_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 }
 

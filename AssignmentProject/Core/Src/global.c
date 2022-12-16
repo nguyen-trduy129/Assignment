@@ -14,3 +14,10 @@ int mode = 0;
 int redTime = 5;
 int amberTime = 2;
 int greenTime = 3;
+
+void ledBlink(){
+	if (timer1_flag ==1){
+		HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
+		setTimer1(250);
+	}
+}
