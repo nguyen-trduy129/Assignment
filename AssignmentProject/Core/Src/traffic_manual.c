@@ -11,8 +11,8 @@
 void fsm_manual_run(){
 	switch (state_1){
 	case MAN_RED:
-		HAL_GPIO_WritePin(GPIOA, TRAFFIC1_0_Pin, 1);
-		HAL_GPIO_WritePin(GPIOB, TRAFFIC1_1_Pin, 1);
+		HAL_GPIO_WritePin(GPIOA,TRAFFIC1_1_Pin , 1);
+		HAL_GPIO_WritePin(GPIOB,TRAFFIC1_0_Pin , 0);
 
 		if (isButton1Pressed()){
 			state_1= TUN_GREEN;
@@ -36,8 +36,8 @@ void fsm_manual_run(){
 		}
 		break;
 	case MAN_GREEN:
-		HAL_GPIO_WritePin(GPIOA, TRAFFIC1_0_Pin, 1);
-		HAL_GPIO_WritePin(GPIOB, TRAFFIC1_1_Pin, 0);
+		HAL_GPIO_WritePin(GPIOA,TRAFFIC1_1_Pin , 0);
+		HAL_GPIO_WritePin(GPIOB,TRAFFIC1_0_Pin , 1);
 
 		if (isButton1Pressed()){
 			state_1= TUN_GREEN;
@@ -61,9 +61,8 @@ void fsm_manual_run(){
 		}
 		break;
 	case MAN_AMBER:
-		HAL_GPIO_WritePin(GPIOA, TRAFFIC1_0_Pin, 0);
-		HAL_GPIO_WritePin(GPIOB, TRAFFIC1_1_Pin, 1);
-		break;
+		HAL_GPIO_WritePin(GPIOA,TRAFFIC1_1_Pin , 1);
+		HAL_GPIO_WritePin(GPIOB,TRAFFIC1_0_Pin , 1);
 
 		if (isButton1Pressed()){
 			state_1= TUN_GREEN;
@@ -85,6 +84,7 @@ void fsm_manual_run(){
 			state_1=AUTO_RED;
 			setTimer2(redTime*1000);
 		}
+		break;
 	default:
 		break;
 	}
@@ -92,8 +92,8 @@ void fsm_manual_run(){
 
 	switch (state_2){
 	case MAN_GREEN:
-		HAL_GPIO_WritePin(GPIOB, TRAFFIC2_0_Pin, 1);
-		HAL_GPIO_WritePin(GPIOB, TRAFFIC2_1_Pin, 0);
+		HAL_GPIO_WritePin(GPIOB,TRAFFIC2_1_Pin , 0);
+		HAL_GPIO_WritePin(GPIOB,TRAFFIC2_0_Pin , 1);
 
 		if (isButton1Pressed()){
 			state_2= TUN_GREEN;
@@ -117,8 +117,8 @@ void fsm_manual_run(){
 		}
 		break;
 	case MAN_AMBER:
-		HAL_GPIO_WritePin(GPIOB, TRAFFIC2_0_Pin, 1);
-		HAL_GPIO_WritePin(GPIOB, TRAFFIC2_1_Pin, 1);
+		HAL_GPIO_WritePin(GPIOB,TRAFFIC2_0_Pin , 1);
+		HAL_GPIO_WritePin(GPIOB,TRAFFIC2_1_Pin , 1);
 
 		if (isButton1Pressed()){
 			state_2= TUN_GREEN;
@@ -142,8 +142,8 @@ void fsm_manual_run(){
 		}
 		break;
 	case MAN_RED:
-		HAL_GPIO_WritePin(GPIOB, TRAFFIC2_0_Pin, 0);
-		HAL_GPIO_WritePin(GPIOB, TRAFFIC2_1_Pin, 1);
+		HAL_GPIO_WritePin(GPIOB,TRAFFIC2_1_Pin , 1);
+		HAL_GPIO_WritePin(GPIOB,TRAFFIC2_0_Pin , 0);
 
 		if (isButton1Pressed()){
 			state_2= TUN_GREEN;

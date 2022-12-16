@@ -72,10 +72,10 @@ void Error_Handler(void);
 #define BUZZER_GPIO_Port GPIOA
 #define BUTTON3_Pin GPIO_PIN_0
 #define BUTTON3_GPIO_Port GPIOB
-#define PLED_GREEN_Pin GPIO_PIN_10
-#define PLED_GREEN_GPIO_Port GPIOB
-#define PLED_RED_Pin GPIO_PIN_8
-#define PLED_RED_GPIO_Port GPIOA
+#define PLED_RED_Pin GPIO_PIN_10
+#define PLED_RED_GPIO_Port GPIOB
+#define PLED_GREEN_Pin GPIO_PIN_8
+#define PLED_GREEN_GPIO_Port GPIOA
 #define TRAFFIC1_1_Pin GPIO_PIN_10
 #define TRAFFIC1_1_GPIO_Port GPIOA
 #define TRAFFIC1_0_Pin GPIO_PIN_3

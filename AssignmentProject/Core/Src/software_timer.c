@@ -20,6 +20,9 @@ int timer3_counter = 0;
 int timer4_flag = 0;
 int timer4_counter = 0;
 
+int timer5_flag =0;
+int timer5_counter =0;
+
 void setTimer1(int duration){
 	timer1_counter = duration/TICK;
 	timer1_flag = 0;
@@ -46,7 +49,7 @@ int get_timer2_counter(){
 	return timer2_counter;
 }
 
-int timerInit(){
+void timerInit(){
 	setTimer1(30);
 	setTimer2(50);
 	setTimer3(70);

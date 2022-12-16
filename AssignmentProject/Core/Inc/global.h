@@ -53,4 +53,6 @@ extern int mode;
 extern int state_1;
 extern int state_2;
 
+void ledBlink();
+
 #endif /* INC_GLOBAL_H_ */
