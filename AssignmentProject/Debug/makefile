@@ -61,8 +61,8 @@ all: main-build
 main-build: AssignmentProject.elf secondary-outputs
 
 # Tool invocations
-AssignmentProject.elf: $(OBJS) $(USER_OBJS) E:\Files\Flexible\Microcotroller-\ Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+AssignmentProject.elf: $(OBJS) $(USER_OBJS) C:\Users\Windows\Desktop\Fix-Assign\Assignment\AssignmentProject\STM32F103RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\Windows\Desktop\Fix-Assign\Assignment\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
