@@ -1,6 +1,13 @@
-17:01:23 **** Incremental Build of configuration Debug for project AssignmentProject ****
+00:05:59 **** Incremental Build of configuration Debug for project AssignmentProject ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/pedestrian_light.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/pedestrian_light.d" -MT"Core/Src/pedestrian_light.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/pedestrian_light.o"
+arm-none-eabi-size   AssignmentProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19728	    212	   1932	  21872	   5570	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+09:57:44 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: AssignmentProject.elf
  
@@ -8,35 +15,23 @@ arm-none-eabi-size   AssignmentProject.elf
 arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
 arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
    text	   data	    bss	    dec	    hex	filename
-  16596	    116	   1868	  18580	   4894	AssignmentProject.elf
+  19868	    212	   1932	  22012	   55fc	AssignmentProject.elf
 Finished building: default.size.stdout
  
 Finished building: AssignmentProject.bin
  
 Finished building: AssignmentProject.list
  
-17:01:38 **** Incremental Build of configuration Debug for project AssignmentProject ****
+09:58:18 **** Incremental Build of configuration Debug for project AssignmentProject ****
 make -j8 all 
 arm-none-eabi-size   AssignmentProject.elf 
    text	   data	    bss	    dec	    hex	filename
-  16596	    116	   1868	  18580	   4894	AssignmentProject.elf
+  19868	    212	   1932	  22012	   55fc	AssignmentProject.elf
 Finished building: default.size.stdout
  
-17:03:13 **** Incremental Build of configuration Debug for project AssignmentProject ****
+10:03:18 **** Incremental Build of configuration Debug for project AssignmentProject ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
-arm-none-eabi-gcc "../Core/Src/pedestrian_light.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/pedestrian_light.d" -MT"Core/Src/pedestrian_light.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/pedestrian_light.o"
-../Core/Src/pedestrian_light.c: In function 'pedes_light_fsm':
-../Core/Src/pedestrian_light.c:16:3: error: 'dutycle' undeclared (first use in this function)
-   16 |   dutycle = 5;
-      |   ^~~~~~~
-../Core/Src/pedestrian_light.c:16:3: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:64: Core/Src/pedestrian_light.o] Error 1
-make: *** Waiting for unfinished jobs....
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-17:03:29 **** Incremental Build of configuration Debug for project AssignmentProject ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/pedestrian_light.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/pedestrian_light.d" -MT"Core/Src/pedestrian_light.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/pedestrian_light.o"
 arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: AssignmentProject.elf
  
@@ -44,14 +39,206 @@ arm-none-eabi-size   AssignmentProject.elf
 arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
 arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
    text	   data	    bss	    dec	    hex	filename
-  16420	    112	   1864	  18396	   47dc	AssignmentProject.elf
+  19892	    212	   1932	  22036	   5614	AssignmentProject.elf
 Finished building: default.size.stdout
  
 Finished building: AssignmentProject.bin
  
 Finished building: AssignmentProject.list
  
-17:06:24 **** Incremental Build of configuration Debug for project AssignmentProject ****
+10:06:08 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19900	    212	   1932	  22044	   561c	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+10:07:09 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19900	    212	   1932	  22044	   561c	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+10:08:38 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19892	    212	   1932	  22036	   5614	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+10:11:36 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19964	    212	   1932	  22108	   565c	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+10:13:02 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19848	    212	   1932	  21992	   55e8	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+10:14:25 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19840	    212	   1932	  21984	   55e0	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+10:15:02 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-size   AssignmentProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19840	    212	   1932	  21984	   55e0	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+10:16:28 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19928	    212	   1932	  22072	   5638	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+10:16:36 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-size   AssignmentProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19928	    212	   1932	  22072	   5638	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+10:17:50 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19876	    212	   1932	  22020	   5604	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+10:18:29 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-size   AssignmentProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19876	    212	   1932	  22020	   5604	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+10:30:56 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/button.o"
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc "../Core/Src/fsm_mode.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_mode.d" -MT"Core/Src/fsm_mode.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_mode.o"
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/pedestrian_light.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/pedestrian_light.d" -MT"Core/Src/pedestrian_light.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/pedestrian_light.o"
+arm-none-eabi-gcc "../Core/Src/scheduler.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/scheduler.d" -MT"Core/Src/scheduler.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/scheduler.o"
+arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
+arm-none-eabi-gcc "../Core/Src/traffic_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/traffic_automatic.d" -MT"Core/Src/traffic_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/traffic_automatic.o"
+arm-none-eabi-gcc "../Core/Src/traffic_manual.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/traffic_manual.d" -MT"Core/Src/traffic_manual.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/traffic_manual.o"
+arm-none-eabi-gcc "../Core/Src/traffic_tuning.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/traffic_tuning.d" -MT"Core/Src/traffic_tuning.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/traffic_tuning.o"
+arm-none-eabi-gcc "../Core/Src/uart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/uart.d" -MT"Core/Src/uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/uart.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19904	    212	   1940	  22056	   5628	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+10:31:38 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-size   AssignmentProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19904	    212	   1940	  22056	   5628	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+10:32:08 **** Incremental Build of configuration Debug for project AssignmentProject ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/pedestrian_light.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/pedestrian_light.d" -MT"Core/Src/pedestrian_light.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/pedestrian_light.o"
 arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -61,7 +248,522 @@ arm-none-eabi-size   AssignmentProject.elf
 arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
 arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
    text	   data	    bss	    dec	    hex	filename
-  16428	    112	   1864	  18404	   47e4	AssignmentProject.elf
+  19912	    212	   1940	  22064	   5630	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+10:38:53 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19852	    212	   1940	  22004	   55f4	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+10:40:37 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19864	    212	   1940	  22016	   5600	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+10:41:14 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-size   AssignmentProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19864	    212	   1940	  22016	   5600	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+10:45:00 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-size   AssignmentProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19864	    212	   1940	  22016	   5600	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+10:45:37 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19864	    212	   1940	  22016	   5600	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+10:46:12 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19864	    212	   1940	  22016	   5600	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+10:47:10 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19868	    212	   1940	  22020	   5604	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+10:47:52 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19868	    212	   1940	  22020	   5604	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+10:49:36 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19928	    212	   1940	  22080	   5640	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+10:52:57 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19928	    212	   1940	  22080	   5640	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+10:53:55 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19928	    212	   1940	  22080	   5640	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+10:57:51 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19928	    212	   1940	  22080	   5640	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+10:58:37 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19920	    212	   1940	  22072	   5638	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+11:03:12 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19928	    212	   1940	  22080	   5640	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+11:04:05 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  20556	    212	   1940	  22708	   58b4	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+11:08:55 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19920	    212	   1940	  22072	   5638	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+11:09:44 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19920	    212	   1940	  22072	   5638	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+11:11:18 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19920	    212	   1940	  22072	   5638	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+11:12:06 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19924	    212	   1940	  22076	   563c	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+11:13:30 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19920	    212	   1940	  22072	   5638	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+11:14:12 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19920	    212	   1940	  22072	   5638	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+11:14:48 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19920	    212	   1940	  22072	   5638	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+11:15:38 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19920	    212	   1940	  22072	   5638	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+11:16:12 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-size   AssignmentProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19920	    212	   1940	  22072	   5638	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+11:19:01 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19912	    212	   1940	  22064	   5630	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+11:19:39 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19920	    212	   1940	  22072	   5638	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+11:25:58 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19964	    212	   1940	  22116	   5664	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+11:26:53 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19964	    212	   1940	  22116	   5664	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+11:27:45 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19964	    212	   1940	  22116	   5664	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+11:28:20 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19968	    212	   1940	  22120	   5668	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+11:29:06 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19964	    212	   1940	  22116	   5664	AssignmentProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: AssignmentProject.bin
+ 
+Finished building: AssignmentProject.list
+ 
+11:32:25 **** Incremental Build of configuration Debug for project AssignmentProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buzzer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/buzzer.d" -MT"Core/Src/buzzer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/buzzer.o"
+arm-none-eabi-gcc -o "AssignmentProject.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Files\Flexible\Microcotroller- Microprocessor\LAB\Project\AssignmentProject\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AssignmentProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AssignmentProject.elf
+ 
+arm-none-eabi-size   AssignmentProject.elf 
+arm-none-eabi-objdump -h -S  AssignmentProject.elf  > "AssignmentProject.list"
+arm-none-eabi-objcopy  -O binary  AssignmentProject.elf  "AssignmentProject.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19920	    212	   1940	  22072	   5638	AssignmentProject.elf
 Finished building: default.size.stdout
  
 Finished building: AssignmentProject.bin

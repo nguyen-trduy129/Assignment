@@ -28,7 +28,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Inc/global.h ../Core/Inc/scheduler.h \
  ../Core/Inc/traffic_automatic.h ../Core/Inc/traffic_manual.h \
  ../Core/Inc/pedestrian_light.h ../Core/Inc/software_timer.h \
- ../Core/Inc/traffic_tuning.h ../Core/Inc/fsm_mode.h ../Core/Inc/buzzer.h
+ ../Core/Inc/traffic_tuning.h ../Core/Inc/fsm_mode.h ../Core/Inc/buzzer.h \
+ ../Core/Inc/uart.h
 
 ../Core/Inc/main.h:
 
@@ -105,3 +106,5 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/fsm_mode.h:
 
 ../Core/Inc/buzzer.h:
+
+../Core/Inc/uart.h:

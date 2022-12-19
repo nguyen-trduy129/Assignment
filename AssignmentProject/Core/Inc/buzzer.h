@@ -10,8 +10,12 @@
 
 #include "global.h"
 
-extern TIM_HandleTypeDef htim3;
+#define BUZZER_OFF		0
+#define	BUZZER_ON		1
 
-void buzzerRun(int value);
+extern TIM_HandleTypeDef htim3;
+extern int buzzer_flag;
+
+void buzzerRun();
 
 #endif /* INC_BUZZER_H_ */

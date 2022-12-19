@@ -17,6 +17,7 @@ void fsm_manual_run1(){
 		if (mode == MODE_3){
 			state_1= TUN_GREEN;
 			HAL_GPIO_WritePin(GPIOA, TRAFFIC1_1_Pin, 0);
+			uartRun();
 			setTimer2(250);
 		}
 
@@ -33,6 +34,7 @@ void fsm_manual_run1(){
 		if (mode == MODE_3){
 			state_1= TUN_GREEN;
 			HAL_GPIO_WritePin(GPIOA, TRAFFIC1_1_Pin, 0);
+			uartRun();
 			setTimer2(250);
 		}
 
@@ -49,6 +51,7 @@ void fsm_manual_run1(){
 		if (mode == MODE_3){
 			state_1= TUN_GREEN;
 			HAL_GPIO_WritePin(GPIOA, TRAFFIC1_1_Pin, 0);
+			uartRun();
 			setTimer2(250);
 		}
 

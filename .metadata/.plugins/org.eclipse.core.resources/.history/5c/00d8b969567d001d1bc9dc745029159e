@@ -1,0 +1,40 @@
+/*
+ * uart.c
+ *
+ *  Created on: Dec 16, 2022
+ *      Author: duyvt
+ */
+
+#include "uart.h"
+
+UART_HandleTypeDef huart2;
+char str1[10];
+char str2[10];
+char str3[10];
+
+void uartRun(){
+	if (mode == MODE_3){
+		switch(state_1){
+		case TUN_RED:
+			if (timer7_flag ==1){
+				HAL_UART_Transmit (&huart2, (void*)str1, sprintf (str1 , "!R:%d#", redTime), 500);
+				setTimer7(500);
+			}
+			break;
+		case TUN_GREEN:
+			if (timer7_flag ==1){
+				HAL_UART_Transmit (&huart2, (void*)str3, sprintf (str3 , "!G:%d#", greenTime), 500);
+				setTimer7(500);
+			}
+			break;
+		case TUN_AMBER:
+			if (timer7_flag ==1){
+				HAL_UART_Transmit (&huart2, (void*)str2, sprintf (str2 , "!A:%d#", amberTime), 500);
+				setTimer7(500);
+			}
+			break;
+		default:
+			break;
+		}
+	}
+}

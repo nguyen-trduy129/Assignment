@@ -1,2 +1,2 @@
 traffic_manual.c:11:6:fsm_manual_run1	8	static
-traffic_manual.c:66:6:fsm_manual_run2	8	static
+traffic_manual.c:69:6:fsm_manual_run2	8	static

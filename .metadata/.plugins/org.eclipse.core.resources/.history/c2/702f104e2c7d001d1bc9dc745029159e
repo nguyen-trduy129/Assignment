@@ -1,0 +1,14 @@
+/*
+ * uart.c
+ *
+ *  Created on: Dec 16, 2022
+ *      Author: duyvt
+ */
+
+#include "uart.h"
+
+UART_HandleTypeDef huart2;
+char str1[10];
+char str2[10];
+char str3[10];
+

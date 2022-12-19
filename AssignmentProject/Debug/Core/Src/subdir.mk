@@ -20,7 +20,8 @@ C_SRCS += \
 ../Core/Src/system_stm32f1xx.c \
 ../Core/Src/traffic_automatic.c \
 ../Core/Src/traffic_manual.c \
-../Core/Src/traffic_tuning.c 
+../Core/Src/traffic_tuning.c \
+../Core/Src/uart.c 
 
 OBJS += \
 ./Core/Src/button.o \
@@ -38,7 +39,8 @@ OBJS += \
 ./Core/Src/system_stm32f1xx.o \
 ./Core/Src/traffic_automatic.o \
 ./Core/Src/traffic_manual.o \
-./Core/Src/traffic_tuning.o 
+./Core/Src/traffic_tuning.o \
+./Core/Src/uart.o 
 
 C_DEPS += \
 ./Core/Src/button.d \
@@ -56,7 +58,8 @@ C_DEPS += \
 ./Core/Src/system_stm32f1xx.d \
 ./Core/Src/traffic_automatic.d \
 ./Core/Src/traffic_manual.d \
-./Core/Src/traffic_tuning.d 
+./Core/Src/traffic_tuning.d \
+./Core/Src/uart.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

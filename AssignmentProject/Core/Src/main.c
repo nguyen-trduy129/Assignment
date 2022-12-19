@@ -43,7 +43,7 @@
 TIM_HandleTypeDef htim2;
 //TIM_HandleTypeDef htim3;
 
-UART_HandleTypeDef huart2;
+//UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 
@@ -108,7 +108,6 @@ int main(void)
   {
 	  ledBlink();
 	  modeRun();
-	 // buzzerRun();
 	  pedes_light_fsm();
 	  fsm_automatic_run1();
 	  fsm_automatic_run2();
@@ -116,24 +115,8 @@ int main(void)
 	  fsm_manual_run2();
 	  fsm_tuning_run1();
 	  fsm_tuning_run2();
-
-	  //__HAL_TIM_SetCompare (&htim3,TIM_CHANNEL_1,5);
-//	  HAL_Delay(10);
-//	  __HAL_TIM_SetCompare (&htim3,TIM_CHANNEL_1,12);
-//	  HAL_Delay(10);
-//	  __HAL_TIM_SetCompare (&htim3,TIM_CHANNEL_1,25);
-//	  HAL_Delay(10);
-//	  __HAL_TIM_SetCompare (&htim3,TIM_CHANNEL_1,40);
-//	  HAL_Delay(10);
-//	  __HAL_TIM_SetCompare (&htim3,TIM_CHANNEL_1,60);
-//	  HAL_Delay(10);
-//	  __HAL_TIM_SetCompare (&htim3,TIM_CHANNEL_1,80);
-//	  HAL_Delay(10);
-//	  __HAL_TIM_SetCompare (&htim3,TIM_CHANNEL_1,100);
-//	 if (timer6_flag ==1){
-//
-//		  setTimer6(250);
-//	 }
+	  buzzerRun();
+//	  uartRun();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

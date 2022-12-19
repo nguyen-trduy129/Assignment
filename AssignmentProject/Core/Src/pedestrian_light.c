@@ -19,6 +19,7 @@ void pedes_light_fsm(){
 	case PEDES_OFF:
 		HAL_GPIO_WritePin(PLED_GREEN_GPIO_Port, PLED_GREEN_Pin, 0);
 		HAL_GPIO_WritePin(PLED_RED_GPIO_Port, PLED_RED_Pin, 0);
+		buzzer_flag = BUZZER_OFF;
 
 		if (isButtonPedesPressed()){
 			if (state_1 == AUTO_RED){
@@ -38,6 +39,7 @@ void pedes_light_fsm(){
 	case PEDES_GREEN:
 		HAL_GPIO_WritePin(PLED_GREEN_GPIO_Port, PLED_GREEN_Pin, 1);
 		HAL_GPIO_WritePin(PLED_RED_GPIO_Port, PLED_RED_Pin, 0);
+		buzzer_flag = BUZZER_ON;
 
 		if (timer4_flag ==1){
 			pedes_state = PEDES_RED;
@@ -50,6 +52,7 @@ void pedes_light_fsm(){
 	case PEDES_RED:
 		HAL_GPIO_WritePin(PLED_GREEN_GPIO_Port, PLED_GREEN_Pin, 0);
 		HAL_GPIO_WritePin(PLED_RED_GPIO_Port, PLED_RED_Pin, 1);
+		buzzer_flag = BUZZER_OFF;
 
 		if (timer4_flag ==1){
 			pedes_state = PEDES_GREEN;

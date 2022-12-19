@@ -18,6 +18,9 @@
 #include "traffic_tuning.h"
 #include "fsm_mode.h"
 #include "buzzer.h"
+#include "uart.h"
+
+#include <stdio.h>
 
 #define TICK 			10
 #define WAITING_TIME 	10000

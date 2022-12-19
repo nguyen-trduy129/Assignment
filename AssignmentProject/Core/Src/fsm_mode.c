@@ -149,14 +149,17 @@ void modeRun(){
 			case TUN_GREEN:
 				if (greenTime <99) greenTime++;
 				else greenTime =1;
+				uartRun();
 				break;
 			case TUN_AMBER:
 				if (amberTime <99) amberTime++;
 				else amberTime =1;
+				uartRun();
 				break;
 			case TUN_RED:
 				if (redTime <99) redTime++;
 				else redTime =1;
+				uartRun();
 				break;
 			default:
 				break;
