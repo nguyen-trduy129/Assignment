@@ -573,3 +573,22 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\Windows\Deskt
 
 !ENTRY org.eclipse.cdt.core 1 0 2022-12-20 10:46:49.094
 !MESSAGE Indexed 'AssignmentProject' (30 sources, 108 headers) in 1.81 sec: 8,003 declarations; 41,013 references; 2 unresolved inclusions; 36 syntax errors; 188 unresolved names (0.38%)
+!SESSION 2022-12-20 11:34:34.385 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  C:\Users\Windows\Desktop\Fix-Assign\Assignment\AssignmentProject\.cproject
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\Windows\Desktop\Fix-Assign\Assignment\AssignmentProject\.cproject
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-12-20 11:34:41.187
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-12-20 11:34:41.218
+!MESSAGE Log4j initialized with config file C:\Users\Windows\Desktop\Fix-Assign\Assignment\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-12-20 11:34:46.195
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-12-20 11:34:48.174
+!MESSAGE Indexed 'AssignmentProject' (30 sources, 108 headers) in 1.82 sec: 8,001 declarations; 41,014 references; 2 unresolved inclusions; 36 syntax errors; 188 unresolved names (0.38%)

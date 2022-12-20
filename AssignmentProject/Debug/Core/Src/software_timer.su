@@ -9,4 +9,4 @@ software_timer.c:65:6:setTimer8	16	static
 software_timer.c:69:5:get_timer2_counter	4	static
 software_timer.c:73:5:get_timer4_counter	4	static
 software_timer.c:77:6:timerInit	8	static
-software_timer.c:87:6:timerRun	4	static
+software_timer.c:88:6:timerRun	4	static

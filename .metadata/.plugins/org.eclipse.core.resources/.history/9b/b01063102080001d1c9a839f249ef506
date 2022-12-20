@@ -82,7 +82,7 @@ void timerInit(){
 	setTimer5(130);
 	setTimer6(170);
 	setTimer7(190);
-	setTimer8(230);
+	setTimer7(230);
 }
 
 void timerRun(){
