@@ -1,10 +1,10 @@
-12:41:49 **** Incremental Build of configuration Debug for project AssignmentProject ****
+11:21:24 **** Incremental Build of configuration Debug for project AssignmentProject ****
 make -j12 all 
 arm-none-eabi-size   AssignmentProject.elf 
    text	   data	    bss	    dec	    hex	filename
-  19940	    212	   1924	  22076	   563c	AssignmentProject.elf
+  19944	    212	   1924	  22080	   5640	AssignmentProject.elf
 Finished building: default.size.stdout
  
 
-12:41:49 Build Finished. 0 errors, 0 warnings. (took 295ms)
+11:21:24 Build Finished. 0 errors, 0 warnings. (took 272ms)
 
