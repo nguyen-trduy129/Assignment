@@ -3773,3 +3773,15 @@
 
 
 2023-01-05 10:32:03,237 [INFO] Activator:178 - !SESSION log4j initialized
+2023-01-05 21:06:42,292 [INFO] Activator:177 - 
+
+
+2023-01-05 21:06:42,294 [INFO] Activator:178 - !SESSION log4j initialized
+2023-01-05 21:07:21,023 [INFO] RetryExec:97 - I/O exception (java.net.SocketException) caught when processing request to {s}->https://sw-center.st.com:443: Socket operation on nonsocket: configureBlocking
+2023-01-05 21:07:21,026 [INFO] RetryExec:113 - Retrying request to {s}->https://sw-center.st.com:443
+2023-01-05 21:08:56,297 [INFO] Activator:177 - 
+
+
+2023-01-05 21:08:56,299 [INFO] Activator:178 - !SESSION log4j initialized
+2023-01-05 21:09:29,189 [INFO] RetryExec:97 - I/O exception (java.net.SocketException) caught when processing request to {s}->https://sw-center.st.com:443: Socket operation on nonsocket: configureBlocking
+2023-01-05 21:09:29,190 [INFO] RetryExec:113 - Retrying request to {s}->https://sw-center.st.com:443

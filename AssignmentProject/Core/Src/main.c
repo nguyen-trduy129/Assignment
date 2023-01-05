@@ -116,7 +116,7 @@ int main(void)
 	  fsm_tuning_run1();
 	  fsm_tuning_run2();
 	  buzzerRun();
-//	  uartRun();
+	  uartRun();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
