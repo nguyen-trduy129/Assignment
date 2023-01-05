@@ -31,6 +31,9 @@ void buzzerRun(){
 			setTimer7(250);
 		}
 
+		if (mode != MODE_1){
+			buzzer_flag = BUZZER_OFF;
+		}
 		break;
 	default:
 		break;

@@ -10,7 +10,6 @@
 
 #include "main.h"
 #include "button.h"
-#include "scheduler.h"
 #include "traffic_automatic.h"
 #include "traffic_manual.h"
 #include "pedestrian_light.h"

@@ -65,10 +65,6 @@ void pedes_light_fsm(){
 		if (timer5_flag ==1){
 			pedes_state = PEDES_OFF;
 		}
-
-		if (mode != MODE_1){
-			pedes_state = PEDES_OFF;
-		}
 		break;
 	default:
 		break;
